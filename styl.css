@@ -1,0 +1,244 @@
+body,html{
+    height: 100%;
+}
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.hero
+{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("bgm.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.hero-txt
+        {
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            position: absolute;
+            color: white;
+            font-size: 25px;
+        }
+.hlog{
+            border:none;
+            display: inline-block;
+            padding: 14px 40px;
+
+            color:black;
+            background-color: #ddd;
+            cursor: pointer; 
+            border-radius: 12px;
+        }
+button:hover{
+            color: white;
+            background-color: #555;
+            text-align: center;
+            
+        }
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+section{
+    height: 30vh;
+    font-size: 40px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.column
+{
+    width: 100%;
+    padding: 0 1em 1em 1em;
+    text-align: center;
+}
+.card{
+    width:100%;
+    height: 100%;
+    padding: 2em 1.5em;
+    background: linear-gradient(#ffffff 50%,#2c7bfe 70%);
+    background-size: 100% 200%;
+    background-position: 0 2.5%;
+    border-radius: 5px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+    transition: 0.5s;
+}
+h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f194c;
+    margin: 1em 0;
+}
+p{
+    color: #575a7b;
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+}
+img{
+    margin: auto;
+    position: relative;
+    place-items: center;
+    height: 6em;
+    width: 5em;
+    display: grid;
+    transition: 0.5s;
+}
+@media screen and (min-width:768px) {
+    section{
+        padding: 0 2em;
+    }
+    .column{
+        flex: 0 50%;
+        max-width: 50%;
+    }
+    img{
+        flex: 0 0 33.33%;
+        max-width: 50%;
+    }
+}
+@media screen and (min-width:992px) {
+    section{
+        padding: 1em 3em;
+    }
+    .column{
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+    img{
+        flex: 50%;
+        max-width: 100%;
+    }
+}
+.contact{
+    background-color: whitesmoke;
+    color: teal;
+    clear:both;
+    height: 46px;
+    bottom:10; width:100%;
+    text-align: center;
+}
+.togg{
+    background-color: white;
+    height: 100vh;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    z-index: -100;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.show{
+    transform: translateY(0);
+}
+.hamburger{
+    display: none;
+}
+.navbar ul{
+    display: flex;
+}
+@media only screen and (max-width:1320px){
+    header{
+        padding: 0 50px;
+    }
+}
+@media only screen and (max-width:1100px){
+    header{
+        padding: 0 30px;
+    }
+}
+@media only screen and (max-width:900px){
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger .l{
+           width: 30px;
+           height: 3px;
+           background-color: white;
+           margin: 6px 0;  
+    }
+    .navbar{
+        height:0;
+       position: absolute;
+       top: 80px;
+       left: 0;
+       right: 0;
+       color: white;
+       width: 100vw;
+       background: teal;
+       transition: 0.2s; 
+       overflow: hidden;
+    }
+    .navbar.active{
+         z-index: 99;
+          height: 450px;
+    }
+    .navbar.active ul{
+        opacity: 1;
+    }
+    .navbar ul{
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .navbar ul li a{
+        margin-bottom: 12px;
+    }
+}
+.navbar ul li a{
+    display: block;
+    color: white;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+.navbar ul li a:hover {
+
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+}
+header
+{
+    width: 100%;
+    height: 80px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    background-color: teal;
+    color: white;
+}
+.logo
+{
+    font-size: 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+}
+li
+{
+    list-style: none;
+}
+.navbar ul li a.active{
+    color: teal;
+    background: white;
+}

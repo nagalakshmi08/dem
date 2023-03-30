@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>WeFarm</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            WeFarm
+        </div>
+        <div class="hamburger">
+              <div class="l"></div> 
+              <div class="l"></div>
+              <div class="l"></div> 
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#services" class="">Services</a></li>
+                <li><a href="#cont" class="">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+        <div class="hero" id="hero">
+            <div class="hero-txt">
+                <h1>WeFarm</h1>
+                <h6><font face="verdana">A platform to support farmers</font></h6>
+                <br>
+                <button class="hlog"><b>Login</b></button>
+            </div>
+        </div> 
+        <section>
+            <div class="row" id="services">
+                <h1>Our Services</h1>
+            </div>
+            <br>
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                        <img src="tractor.jpg"><br>
+                        <h3>Want a tractor?
+                        </h3>
+                        <p>We'll help you to find your nearby tractors at reasonable cost!</p>
+                        <a href="#hero"><button class="hlog"><b>View</b></button></a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <img src="soil.jpg"><br>
+                        <h3>Soil</h3>
+                        <p>Upload your soil pic and we'll suggest you the best crop for it!</p>
+                        <a href="#hero"><button class="hlog"><b>View</b></button></a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <img src="customer.png"><br>
+                        <h3>Meet your customer</h3>
+                        <p>Contact directly to the customer and sell your goods at a good price!</p>
+                        <a href="#hero"><button class="hlog"><b>View</b></button></a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <img src="worker.jpg"><br>
+                        <h3>Want a worker?</h3>
+                        <p>Give your location and find nearby workers who are ready to help you in farming!</p>
+                        <a href="#hero"><button class="hlog"><b>View</b></button></a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <img src="query.jpeg"><br>
+                        <h3>Upload your photo query</h3>
+                        <p>Upload your photo query and our experts will give you a best solution!</p>
+                        <a href="#hero"><button class="hlog"><b>View</b></button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact" id="cont">
+                <h4>Contact us</h4>
+                <p class="contact">Phn.no:XXXXXXXXXX</p>
+                <p class="contact">&copy;WeFarm</p>
+            </div>
+        </section>
+        <script>
+            hamburger = document.querySelector(".hamburger");
+            hamburger.onclick = function(){
+                navBar = document.querySelector(".navbar");
+                navBar.classList.toggle("active");
+            }
+        </script>
+</body>
+</html>
